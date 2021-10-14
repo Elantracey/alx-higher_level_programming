@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-""" read a file """
+''' module for the read_file() function '''
 
 
 def read_file(filename=""):
-    with open(filename,  encoding='utf-8') as f:
-        print(f.read(), end="")
+    ''' prints the contents of a file '''
+    with open(filename) as file:
+        print(file.read(), end='')
