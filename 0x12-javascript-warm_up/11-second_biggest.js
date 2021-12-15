@@ -1,19 +1,20 @@
-#!/usr/bin/node
-let max = 0;
-let max2 = 0;
-const len = process.argv.length;
-if (len <= 3) {
-    console.log(0);
-} else {
-    for (let i = 2; i < len; i++) {
-	if (parseInt(process.argv[i]) > max) {
-	    max = process.argv[i];
-	}
-    }
-    for (let j = 2; j < len; j++) {
-	if (parseInt(process.argv[j]) < max && parseInt(process.argv[j]) > max2) {
-	    max2 = process.argv[j];
-	}
-    }
-    console.log(max2);
+##!/usr/bin/node
+
+let biggest = 0;
+let i;
+const arrayNumbers = [];
+
+for (i = 2; i < process.argv.length; i++) {
+  if (Number.isNaN(parseInt(process.argv[i])) === false) {
+    arrayNumbers[i - 2] = parseInt(process.argv[i]);
+  }
 }
+
+if (arrayNumbers.length > 1) {
+  biggest = Math.max.apply(null, arrayNumbers);
+  i = arrayNumbers.indexOf(biggest);
+  arrayNumbers[i] = -Infinity;
+  biggest = Math.max.apply(null, arrayNumbers);
+}
+
+console.log(biggest);
