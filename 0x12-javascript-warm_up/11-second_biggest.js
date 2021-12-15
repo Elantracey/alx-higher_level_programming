@@ -1,5 +1,4 @@
-##!/usr/bin/node
-
+#!/usr/bin/node
 let biggest = 0;
 let i;
 const arrayNumbers = [];
