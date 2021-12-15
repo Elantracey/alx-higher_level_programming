@@ -8,4 +8,3 @@ if (process.argv.length <= 2) {
   n = 'Arguments found';
 }
 console.log(n);
-
