@@ -5,5 +5,5 @@ if (!isNaN(n)) {
     console.log('X'.repeat(n));
     }
 } else {
-  console.log('Missing size');
+    console.log('Missing size');
 }
